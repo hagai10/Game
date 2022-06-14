@@ -27,7 +27,6 @@ public class TheGame implements ActionListener {
         text.setForeground(Color.orange);
         text.setFont(new Font("David", Font.ITALIC, 80));
         text.setHorizontalAlignment(JLabel.CENTER);
-        text.setText("Tic Tac");
         text.setOpaque(true);
 
         title.setLayout(new BorderLayout());
@@ -92,7 +91,6 @@ public class TheGame implements ActionListener {
         }
 
     }
-
     public void check(){
 
         if ((buttons[0].getText() == "X")  &&
@@ -145,9 +143,6 @@ public class TheGame implements ActionListener {
 
             xWins();
         }
-
-
-
 
         if ((buttons[0].getText() == "O")  &&
                 (buttons[1].getText() == "O") &&
@@ -205,18 +200,13 @@ public class TheGame implements ActionListener {
 
             oWins();
         }
-
-
     }
 
     public void xWins(){
         text.setText("X wins");
-
     }
 
     public void oWins(){
-        text.setText("Owins");
+        text.setText("O wins");
     }
-
-
 }
