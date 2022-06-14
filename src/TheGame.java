@@ -6,14 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class TheGame implements ActionListener {
-    JFrame frame = new JFrame();
-    JPanel title = new JPanel();
-    JPanel buttonPanel = new JPanel();
-    JLabel text = new JLabel();
-    JButton[] buttons = new JButton[9];
-    Random random = new Random();
-    boolean firstTurn;
+public class TheGame  {
+    protected  static JFrame frame = new JFrame();
+    protected static JPanel title = new JPanel();
+    protected static  JPanel buttonPanel = new JPanel();
+   protected static JLabel text = new JLabel();
+   protected static  JButton[] buttons = new JButton[9];
+   protected static Random random = new Random();
+   protected static boolean firstTurn;
 
 
     TheGame(){
@@ -35,12 +35,14 @@ public class TheGame implements ActionListener {
         buttonPanel.setLayout(new GridLayout(3,3));
         buttonPanel.setForeground(Color.gray);
 
+        GameListener g = new GameListener();
+
         for (int i=0; i<9; i++){
             buttons[i] = new JButton();
             buttonPanel.add(buttons[i]);
             buttons[i].setFont(new Font("Ink Bild", Font.ITALIC, 120));
             buttons[i].setFocusable(false);
-            buttons[i].addActionListener(this);
+            buttons[i].addActionListener(g);
         }
 
 
@@ -50,34 +52,6 @@ public class TheGame implements ActionListener {
 
         firstTurn();
 
-    }
-
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        for (int i= 0; i<9; i++){
-            if (e.getSource()== buttons[i]){
-                if (firstTurn){
-                    if (buttons[i].getText()== ""){
-                        buttons[i].setForeground(Color.BLUE);
-                        buttons[i].setText("X");
-                        firstTurn = false;
-                        text.setText("O turn");
-                        check();
-                    }
-                }
-                else {
-                    if (buttons[i].getText()== ""){
-                        buttons[i].setForeground(Color.RED);
-                        buttons[i].setText("O");
-                        firstTurn = true;
-                        text.setText("X turn");
-                        check();
-                    }
-
-                }
-            }
-        }
     }
 
     public void firstTurn(){
@@ -91,7 +65,7 @@ public class TheGame implements ActionListener {
         }
 
     }
-    public void check(){
+    public static void check(){
 
         if ((buttons[0].getText() == "X")  &&
                 (buttons[1].getText() == "X") &&
@@ -202,11 +176,13 @@ public class TheGame implements ActionListener {
         }
     }
 
-    public void xWins(){
+    public static void xWins(){
         text.setText("X wins");
     }
 
-    public void oWins(){
+    public static void oWins(){
         text.setText("O wins");
     }
+
+
 }
