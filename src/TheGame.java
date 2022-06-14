@@ -18,7 +18,7 @@ public class TheGame implements ActionListener {
 
     TheGame(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 800);
+        frame.setSize(700, 700);
         frame.getContentPane().setBackground(Color.BLUE);
         frame.setLayout(new BorderLayout());
         frame.setVisible(true);
@@ -30,7 +30,7 @@ public class TheGame implements ActionListener {
         text.setOpaque(true);
 
         title.setLayout(new BorderLayout());
-        title.setBounds(0,0,800,100);
+        title.setBounds(0,0,700,100);
 
         buttonPanel.setLayout(new GridLayout(3,3));
         buttonPanel.setForeground(Color.gray);
