@@ -8,7 +8,6 @@ import java.util.Random;
 
 public class TheGame  {
     protected final int PANELWIDTH = 700;
-
     protected final int PANELHEIGHT= 700;
     protected JFrame frame = new JFrame();
     protected JPanel title = new JPanel();
@@ -47,15 +46,12 @@ public class TheGame  {
             buttons[i].setFocusable(false);
             buttons[i].addActionListener(g);
         }
-
-
         title.add(text);
         frame.add(title, BorderLayout.NORTH);
         frame.add(buttonPanel);
 
         firstTurn();
     }
-
     public void firstTurn(){
         try{
             Thread.sleep(3000);
@@ -69,7 +65,6 @@ public class TheGame  {
             firstTurn = false;
             text.setText("O turn");
         }
-
     }
     public static void check(){
 
@@ -77,103 +72,92 @@ public class TheGame  {
                 (buttons[1].getText() == "X") &&
                 (buttons[2].getText() == "X") ){
 
-            xWins(0,1,2);        }
-
+            xWins(0,1,2);
+        }
         if ((buttons[3].getText() == "X")  &&
                 (buttons[4].getText() == "X") &&
                 (buttons[5].getText() == "X") ){
 
-            xWins(3,4,5);        }
-
-
+            xWins(3,4,5);
+        }
         if ((buttons[6].getText() == "X")  &&
                 (buttons[7].getText() == "X") &&
                 (buttons[8].getText() == "X") ){
 
-            xWins(6,7,8);        }
-
+            xWins(6,7,8);
+        }
         if ((buttons[0].getText() == "X")  &&
                 (buttons[3].getText() == "X") &&
                 (buttons[6].getText() == "X") ){
 
-            xWins(0,3,6);        }
-
+            xWins(0,3,6);
+        }
         if ((buttons[1].getText() == "X")  &&
                 (buttons[4].getText() == "X") &&
                 (buttons[7].getText() == "X") ){
 
-            xWins(1,4,7);        }
-
+            xWins(1,4,7);
+        }
         if ((buttons[2].getText() == "X")  &&
                 (buttons[5].getText() == "X") &&
                 (buttons[8].getText() == "X") ){
 
-            xWins(2,5,8);        }
-
+            xWins(2,5,8);
+        }
         if ((buttons[0].getText() == "X")  &&
                 (buttons[4].getText() == "X") &&
                 (buttons[8].getText() == "X") ){
 
             xWins(0,4,8);
         }
-
         if ((buttons[2].getText() == "X")  &&
                 (buttons[4].getText() == "X") &&
                 (buttons[6].getText() == "X") ){
 
             xWins(2,4,6);
         }
-
         if ((buttons[0].getText() == "O")  &&
                 (buttons[1].getText() == "O") &&
                 (buttons[2].getText() == "O") ){
 
             oWins(0,1,2);
         }
-
         if ((buttons[3].getText() == "O")  &&
                 (buttons[4].getText() == "O") &&
                 (buttons[5].getText() == "O") ){
 
             oWins(3,4,5);
         }
-
-
         if ((buttons[6].getText() == "O")  &&
                 (buttons[7].getText() == "O") &&
                 (buttons[8].getText() == "O") ){
 
             oWins(6,7,8);
         }
-
         if ((buttons[0].getText() == "O")  &&
                 (buttons[3].getText() == "O") &&
                 (buttons[6].getText() == "O") ){
 
             oWins(0,3,6);
         }
-
         if ((buttons[1].getText() == "O")  &&
                 (buttons[4].getText() == "O") &&
                 (buttons[7].getText() == "O") ){
 
             oWins(1,4,7);
         }
-
         if ((buttons[2].getText() == "O")  &&
                 (buttons[5].getText() == "O") &&
                 (buttons[8].getText() == "O") ){
 
             oWins(2,5,8);
         }
-
         if ((buttons[0].getText() == "O")  &&
                 (buttons[4].getText() == "O") &&
                 (buttons[8].getText() == "O") ){
 
             oWins(0,4,8);
         }
-
         if ((buttons[2].getText() == "O")  &&
                 (buttons[4].getText() == "O") &&
                 (buttons[6].getText() == "O") ){
@@ -181,7 +165,6 @@ public class TheGame  {
             oWins(2,4,6);
         }
     }
-
     public static void xWins(int a, int b, int c) {
         text.setForeground(Color.CYAN);
         text.setText("X wins");
@@ -190,7 +173,6 @@ public class TheGame  {
         }
 
     }
-
     public static void oWins(int a, int b, int c) {
         text.setForeground(Color.CYAN);
         text.setText("O wins");
