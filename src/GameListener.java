@@ -24,7 +24,7 @@ public class GameListener implements ActionListener {
                        TheGame. buttons[i].setForeground(Color.RED);
                        TheGame. buttons[i].setText("O");
                        TheGame. firstTurn = true;
-                        TheGame.text.setText("X turn");
+                       TheGame.text.setText("X turn");
                        TheGame. check();
                     }
 
