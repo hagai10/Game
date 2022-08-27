@@ -24,6 +24,7 @@ public class TheGame  {
         frame.getContentPane().setBackground(Color.BLUE);
         frame.setLayout(new BorderLayout());
         frame.setVisible(true);
+        frame.setTitle("game");
 
         text.setBackground(Color.black);
         text.setForeground(Color.orange);
@@ -71,110 +72,107 @@ public class TheGame  {
         if ((buttons[0].getText() == "X")  &&
                 (buttons[1].getText() == "X") &&
                 (buttons[2].getText() == "X") ){
-
-            xWins(0,1,2);
+            xWins();
         }
         if ((buttons[3].getText() == "X")  &&
                 (buttons[4].getText() == "X") &&
                 (buttons[5].getText() == "X") ){
 
-            xWins(3,4,5);
+            xWins();
         }
         if ((buttons[6].getText() == "X")  &&
                 (buttons[7].getText() == "X") &&
                 (buttons[8].getText() == "X") ){
 
-            xWins(6,7,8);
+            xWins();
         }
         if ((buttons[0].getText() == "X")  &&
                 (buttons[3].getText() == "X") &&
                 (buttons[6].getText() == "X") ){
 
-            xWins(0,3,6);
+            xWins();
         }
         if ((buttons[1].getText() == "X")  &&
                 (buttons[4].getText() == "X") &&
                 (buttons[7].getText() == "X") ){
 
-            xWins(1,4,7);
+            xWins();
         }
         if ((buttons[2].getText() == "X")  &&
                 (buttons[5].getText() == "X") &&
                 (buttons[8].getText() == "X") ){
 
-            xWins(2,5,8);
+            xWins();
         }
         if ((buttons[0].getText() == "X")  &&
                 (buttons[4].getText() == "X") &&
                 (buttons[8].getText() == "X") ){
 
-            xWins(0,4,8);
+            xWins();
         }
         if ((buttons[2].getText() == "X")  &&
                 (buttons[4].getText() == "X") &&
                 (buttons[6].getText() == "X") ){
 
-            xWins(2,4,6);
+            xWins();
         }
         if ((buttons[0].getText() == "O")  &&
                 (buttons[1].getText() == "O") &&
                 (buttons[2].getText() == "O") ){
 
-            oWins(0,1,2);
+            oWins();
         }
         if ((buttons[3].getText() == "O")  &&
                 (buttons[4].getText() == "O") &&
                 (buttons[5].getText() == "O") ){
 
-            oWins(3,4,5);
+            oWins();
         }
         if ((buttons[6].getText() == "O")  &&
                 (buttons[7].getText() == "O") &&
                 (buttons[8].getText() == "O") ){
 
-            oWins(6,7,8);
+            oWins();
         }
         if ((buttons[0].getText() == "O")  &&
                 (buttons[3].getText() == "O") &&
                 (buttons[6].getText() == "O") ){
 
-            oWins(0,3,6);
+            oWins();
         }
         if ((buttons[1].getText() == "O")  &&
                 (buttons[4].getText() == "O") &&
                 (buttons[7].getText() == "O") ){
 
-            oWins(1,4,7);
+            oWins();
         }
         if ((buttons[2].getText() == "O")  &&
                 (buttons[5].getText() == "O") &&
                 (buttons[8].getText() == "O") ){
 
-            oWins(2,5,8);
+            oWins();
         }
         if ((buttons[0].getText() == "O")  &&
                 (buttons[4].getText() == "O") &&
                 (buttons[8].getText() == "O") ){
 
-            oWins(0,4,8);
+            oWins();
         }
         if ((buttons[2].getText() == "O")  &&
                 (buttons[4].getText() == "O") &&
                 (buttons[6].getText() == "O") ){
 
-            oWins(2,4,6);
+            oWins();
         }
     }
-    public static void xWins(int a, int b, int c) {
-        text.setForeground(Color.CYAN);
+    public static void xWins() {
         text.setText("X wins");
         for(int i=0;i<9; i++){
             buttons[i].setEnabled(false);
         }
 
     }
-    public static void oWins(int a, int b, int c) {
-        text.setForeground(Color.CYAN);
+    public static void oWins() {
         text.setText("O wins");
         for(int i=0;i<9; i++){
             buttons[i].setEnabled(false);
