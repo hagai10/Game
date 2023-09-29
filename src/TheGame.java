@@ -68,102 +68,15 @@ public class TheGame  {
         }
     }
     public static void check(){
-
-        if ((buttons[0].getText() == "X")  &&
-                (buttons[1].getText() == "X") &&
-                (buttons[2].getText() == "X") ){
-            xWins();
+        int [][]conditionToWin = {{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
+        for (int i = 0; i < conditionToWin.length; i++) {
+            int one = conditionToWin [i][0];
+            int two = conditionToWin [i][1];
+            int tree = conditionToWin [i][2];
+            if (buttons[one].getText() =="X" && buttons[two].getText()=="X" &&buttons[tree].getText()=="X" ) xWins();
+            if (buttons[one].getText() =="O" && buttons[two].getText()=="O" &&buttons[tree].getText()=="O" ) oWins();
         }
-        if ((buttons[3].getText() == "X")  &&
-                (buttons[4].getText() == "X") &&
-                (buttons[5].getText() == "X") ){
 
-            xWins();
-        }
-        if ((buttons[6].getText() == "X")  &&
-                (buttons[7].getText() == "X") &&
-                (buttons[8].getText() == "X") ){
-
-            xWins();
-        }
-        if ((buttons[0].getText() == "X")  &&
-                (buttons[3].getText() == "X") &&
-                (buttons[6].getText() == "X") ){
-
-            xWins();
-        }
-        if ((buttons[1].getText() == "X")  &&
-                (buttons[4].getText() == "X") &&
-                (buttons[7].getText() == "X") ){
-
-            xWins();
-        }
-        if ((buttons[2].getText() == "X")  &&
-                (buttons[5].getText() == "X") &&
-                (buttons[8].getText() == "X") ){
-
-            xWins();
-        }
-        if ((buttons[0].getText() == "X")  &&
-                (buttons[4].getText() == "X") &&
-                (buttons[8].getText() == "X") ){
-
-            xWins();
-        }
-        if ((buttons[2].getText() == "X")  &&
-                (buttons[4].getText() == "X") &&
-                (buttons[6].getText() == "X") ){
-
-            xWins();
-        }
-        if ((buttons[0].getText() == "O")  &&
-                (buttons[1].getText() == "O") &&
-                (buttons[2].getText() == "O") ){
-
-            oWins();
-        }
-        if ((buttons[3].getText() == "O")  &&
-                (buttons[4].getText() == "O") &&
-                (buttons[5].getText() == "O") ){
-
-            oWins();
-        }
-        if ((buttons[6].getText() == "O")  &&
-                (buttons[7].getText() == "O") &&
-                (buttons[8].getText() == "O") ){
-
-            oWins();
-        }
-        if ((buttons[0].getText() == "O")  &&
-                (buttons[3].getText() == "O") &&
-                (buttons[6].getText() == "O") ){
-
-            oWins();
-        }
-        if ((buttons[1].getText() == "O")  &&
-                (buttons[4].getText() == "O") &&
-                (buttons[7].getText() == "O") ){
-
-            oWins();
-        }
-        if ((buttons[2].getText() == "O")  &&
-                (buttons[5].getText() == "O") &&
-                (buttons[8].getText() == "O") ){
-
-            oWins();
-        }
-        if ((buttons[0].getText() == "O")  &&
-                (buttons[4].getText() == "O") &&
-                (buttons[8].getText() == "O") ){
-
-            oWins();
-        }
-        if ((buttons[2].getText() == "O")  &&
-                (buttons[4].getText() == "O") &&
-                (buttons[6].getText() == "O") ){
-
-            oWins();
-        }
     }
     public static void xWins() {
         text.setText("X wins");
